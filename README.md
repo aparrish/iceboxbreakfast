@@ -18,6 +18,21 @@ something to composite an image. Also, I wanted to try to make a Mastodon bot.
 
 [Follow the bot here.](https://botsin.space/@iceboxbreakfast)
 
+## Running the bot
+
+Install the required dependencies with `pip` (you may prefer to set up a
+virtual environment first):
+
+    pip install -r requirements.txt
+
+Then run on the command line like so:
+
+    python bot.py CLIENT_ID CLIENT_SECRET ACCESS_TOKEN
+
+... replacing `CLIENT_ID`, `CLIENT_SECRET`, and `ACCESS_TOKEN` with the
+corresponding bits of authentication as appropriate. Add to your crontab 
+and voila!
+
 ## Implementation
 
 The core of this program are the lists of verbs (`*_lemmas.txt` in this
@@ -45,28 +60,30 @@ the bot does is read the credentials from the command line, run the
 
 ## License
 
-The source code in this repository is provided under the MIT license. See LICENSE.TXT for more information. The contents of `*_lemmas.txt` are derived from WordNet, and carry the following license:
+The source code in this repository is provided under the MIT license. See
+LICENSE.TXT for more information. The contents of `*_lemmas.txt` are derived
+from WordNet, and carry the following license:
 
-WordNet 3.0 license: (Download)
+    WordNet Release 3.0
 
-WordNet Release 3.0 This software and database is being provided to you, the
-LICENSEE, by Princeton University under the following license. By obtaining,
-using and/or copying this software and database, you agree that you have read,
-understood, and will comply with these terms and conditions.: Permission to
-use, copy, modify and distribute this software and database and its
-documentation for any purpose and without fee or royalty is hereby granted,
-provided that you agree to comply with the following copyright notice and
-statements, including the disclaimer, and that the same appear on ALL copies of
-the software, database and documentation, including modifications that you make
-for internal use or for distribution. WordNet 3.0 Copyright 2006 by Princeton
-University. All rights reserved. THIS SOFTWARE AND DATABASE IS PROVIDED "AS IS"
-AND PRINCETON UNIVERSITY MAKES NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR
-IMPLIED. BY WAY OF EXAMPLE, BUT NOT LIMITATION, PRINCETON UNIVERSITY MAKES NO
-REPRESENTATIONS OR WARRANTIES OF MERCHANT- ABILITY OR FITNESS FOR ANY
-PARTICULAR PURPOSE OR THAT THE USE OF THE LICENSED SOFTWARE, DATABASE OR
-DOCUMENTATION WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS
-OR OTHER RIGHTS. The name of Princeton University or Princeton may not be used
-in advertising or publicity pertaining to distribution of the software and/or
-database. Title to copyright in this software, database and any associated
-documentation shall at all times remain with Princeton University and LICENSEE
-agrees to preserve same.
+    This software and database is being provided to you, the LICENSEE, by Princeton
+    University under the following license. By obtaining, using and/or copying this
+    software and database, you agree that you have read, understood, and will
+    comply with these terms and conditions.: Permission to use, copy, modify and
+    distribute this software and database and its documentation for any purpose and
+    without fee or royalty is hereby granted, provided that you agree to comply
+    with the following copyright notice and statements, including the disclaimer,
+    and that the same appear on ALL copies of the software, database and
+    documentation, including modifications that you make for internal use or for
+    distribution. WordNet 3.0 Copyright 2006 by Princeton University. All rights
+    reserved. THIS SOFTWARE AND DATABASE IS PROVIDED "AS IS" AND PRINCETON
+    UNIVERSITY MAKES NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED. BY WAY
+    OF EXAMPLE, BUT NOT LIMITATION, PRINCETON UNIVERSITY MAKES NO REPRESENTATIONS
+    OR WARRANTIES OF MERCHANT- ABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE OR
+    THAT THE USE OF THE LICENSED SOFTWARE, DATABASE OR DOCUMENTATION WILL NOT
+    INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS. The
+    name of Princeton University or Princeton may not be used in advertising or
+    publicity pertaining to distribution of the software and/or database. Title to
+    copyright in this software, database and any associated documentation shall at
+    all times remain with Princeton University and LICENSEE agrees to preserve
+    same.
